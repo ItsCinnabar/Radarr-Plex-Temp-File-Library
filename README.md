@@ -8,6 +8,6 @@ Firstly, you will need to run two different radarr processes. Download radarr ag
 
 Ok, now that you have two radarrs up and running, set them both up to grab whatever you want. I use stevenlu and trakt lists to automate it all. On RadarrTemp, I use a custom format of `C_RX_\B(?<HCSUB>(\W+SUBS?)\B)|(?<HC>(HC|SUBBED|BLURRED|SUB|KOR|CAM))\B` but you can use whatever you think will work best for you. I then disabled downloading of None custom format, so it only downloads if it matches this, and finally I enabled downloading of hardcoded subs in Indexers. On Radarr, under Indexers, set it to not download BLURRED HC KOR SUB SUBBED.
   
-Finally, you need to set up the custom script. Download radarr_post.sh, edit the api_key and port to match RadarrTemp, and set Radarr to run it on grab.
+Finally, you need to set up the custom script. Download radarr_post.sh, edit the api_key and port to match RadarrTemp, and set Radarr to run it on grab with a argument of radarr_movie_imdbid.
 
 Congratulations, you now have two radarrs downloading, with the temp radarr grabbing shitty linux isos and placing them into a temp location which gets nuked and blacklisted on RadarrTemp when Radarr downloads a good file. 
